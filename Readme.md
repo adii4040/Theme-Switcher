@@ -31,28 +31,47 @@ src/
 - **Error Handling**: Context validation with helpful error messages
 - **Responsive Design**: Tailwind CSS styling that adapts to theme changes
 
-## 🔧 Technical Implementation
 
-### Context Architecture
+## 📦 Installation
 
-**ThemeContext.js**
-- Creates the React context using `createContext()`
-- Foundation for sharing theme state across the component tree
+### Prerequisites
+- Node.js (version 14 or higher)
+- npm or yarn package manager
 
-**ThemeProvider.jsx**
-- Manages theme state using `useState` hook
-- Provides `theme` (current theme) and `toggleTheme` (switch function)
-- Wraps child components to provide global access
+### Setup Instructions
 
-**useTheme.js**
-- Custom hook for consuming theme context
-- Includes error boundary for proper usage validation
-- Simplifies theme access in components
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd theme-switcher-app
+   ```
 
-### State Management Flow
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-1. **Provider Setup**: `ThemeProvider` wraps the entire application
-2. **State Creation**: `useState` manages theme state ('light' or 'dark')
-3. **Context Distribution**: Theme data flows to all child components
-4. **Component Consumption**: Components use `useTheme()` hook to access theme
-5. **State Updates**: `toggleTheme()` updates global state, triggering re-renders
+3. **Install required packages** (if not included)
+   ```bash
+   npm install react react-dom
+   npm install -D tailwindcss postcss autoprefixer
+   npm install -D @vitejs/plugin-react
+   ```
+
+4. **Setup Tailwind CSS** (if not configured)
+   ```bash
+   npx tailwindcss init -p
+   ```
+
+5. **Start development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+6. **Open your browser**
+   - Navigate to `http://localhost:5173` (or the URL shown in terminal)
+   - Test the theme switching functionality
